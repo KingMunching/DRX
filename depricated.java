@@ -1,6 +1,8 @@
 import java.util.*;
 
-public class main {
+// THIS IS DEPRICATED
+
+public class depricated {
     public static void main(String[] args) {
         String input = "(2*3)+1";
         Calculator c = new Calculator();
