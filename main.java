@@ -4,7 +4,7 @@ public class main {
     public static void main(String[] args) {
         String input = "(2*3)+1";
         Calculator c = new Calculator();
-        System.out.println(c.evaluate("4"));
+        System.out.println(c.evaluate(input));
     }
 }
 
@@ -21,8 +21,8 @@ class Calculator{
             else if(input.charAt(i)=='(') op.push(input.charAt(i));
             //if its a number
             else if((input.charAt(i)>='0'&&input.charAt(i)<='9')||input.charAt(i)=='.'){
-                int j = i;
-                while((input.charAt(i)>='0'&&input.charAt(i)<='9')||input.charAt(i)=='.'){
+                int j = i+1;
+                while((input.charAt(j)>='0'&&input.charAt(j)<='9')||input.charAt(j)=='.'){
                     j++;
                 }
                 number.push(Double.parseDouble(input.substring(i,j++)));
